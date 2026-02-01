@@ -43,14 +43,9 @@ export function MenuView({ umkm, onBack, onAddToCart }: MenuViewProps) {
 
       {/* UMKM Info */}
       <div className="bg-card rounded-2xl p-4 mb-4 shadow-card">
-        <div className="flex items-center gap-3">
-          <div className="w-12 h-12 rounded-xl bg-gradient-to-br from-muted to-accent/30 flex items-center justify-center">
-            <span className="text-2xl">{umkm.emoji}</span>
-          </div>
-          <div>
-            <h3 className="font-bold text-card-foreground">{umkm.name}</h3>
-            <p className="text-sm text-muted-foreground">{umkm.address}</p>
-          </div>
+        <div>
+          <h3 className="font-bold text-card-foreground">{umkm.name}</h3>
+          <p className="text-sm text-muted-foreground">{umkm.address}</p>
         </div>
       </div>
 
