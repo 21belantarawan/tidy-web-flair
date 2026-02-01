@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { AnimatePresence } from "framer-motion";
 import { Header } from "@/components/Header";
+import { Footer } from "@/components/Footer";
 import { UMKMView } from "@/components/views/UMKMView";
 import { MenuView } from "@/components/views/MenuView";
 import { CartView } from "@/components/views/CartView";
@@ -38,10 +39,10 @@ const Index = () => {
   };
 
   return (
-    <div className="min-h-screen pb-8">
+    <div className="min-h-screen flex flex-col">
       <Header cartCount={cart.totalItems} onCartClick={handleCartClick} />
 
-      <main className="container py-6">
+      <main className="container py-6 flex-1">
         <AnimatePresence mode="wait">
           {currentView === "umkm" && (
             <UMKMView
@@ -72,6 +73,8 @@ const Index = () => {
           )}
         </AnimatePresence>
       </main>
+
+      <Footer />
     </div>
   );
 };
