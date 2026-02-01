@@ -11,6 +11,22 @@ interface UMKMCardProps {
 export function UMKMCard({ umkm, onClick }: UMKMCardProps) {
   const [imageError, setImageError] = useState(false);
 
+  // Check if currently open based on operating hours
+  const checkIsOpen = () => {
+    const now = new Date();
+    const currentTime = now.getHours() * 60 + now.getMinutes();
+    
+    const [openHour, openMin] = umkm.operatingHours.open.split(":").map(Number);
+    const [closeHour, closeMin] = umkm.operatingHours.close.split(":").map(Number);
+    
+    const openTime = openHour * 60 + openMin;
+    const closeTime = closeHour * 60 + closeMin;
+    
+    return currentTime >= openTime && currentTime < closeTime;
+  };
+
+  const isCurrentlyOpen = checkIsOpen();
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -36,12 +52,16 @@ export function UMKMCard({ umkm, onClick }: UMKMCardProps) {
         )}
         <div className="absolute inset-0 bg-gradient-to-t from-foreground/40 to-transparent" />
         
-        {umkm.isOpen && (
-          <div className="absolute top-3 right-3 bg-brand-green px-3 py-1 rounded-full flex items-center gap-1.5 z-10">
-            <span className="w-2 h-2 bg-primary-foreground rounded-full animate-pulse" />
-            <span className="text-xs font-bold text-primary-foreground">Buka</span>
-          </div>
-        )}
+        <div className={`absolute top-3 right-3 px-3 py-1 rounded-full flex items-center gap-1.5 z-10 ${
+          isCurrentlyOpen ? 'bg-brand-green' : 'bg-destructive'
+        }`}>
+          <span className={`w-2 h-2 rounded-full ${
+            isCurrentlyOpen ? 'bg-primary-foreground animate-pulse' : 'bg-primary-foreground'
+          }`} />
+          <span className="text-xs font-bold text-primary-foreground">
+            {isCurrentlyOpen ? 'Buka' : 'Tutup'}
+          </span>
+        </div>
 
         {/* Name overlay on image */}
         <div className="absolute bottom-0 left-0 right-0 p-4">
