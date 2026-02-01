@@ -31,7 +31,7 @@ export const umkmData: UMKM[] = [
         name: "Original Tea",
         price: 15000,
         emoji: "🍛",
-        image: original Tea,
+        image: originalTea,
         description: "Teh pilihan yang diseduh sempurna, Otentik, dan menyegarkan",
       },
       {
