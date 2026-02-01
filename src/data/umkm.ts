@@ -2,7 +2,7 @@ import { UMKM } from "@/types/menu";
 
 // External image URLs - edit these with your own URLs
 const warungBuSri = "";
-const Original tea = "";
+const originalTea = "";
 const mieGoreng = "";
 const ayamPenyet = "";
 const sotoAyam = "";
@@ -31,7 +31,7 @@ export const umkmData: UMKM[] = [
         name: "Original Tea",
         price: 15000,
         emoji: "🍛",
-        image: Original Tea,
+        image: originalTea,
         description: "Teh pilihan yang diseduh sempurna, Otentik, dan menyegarkan",
       },
       {
