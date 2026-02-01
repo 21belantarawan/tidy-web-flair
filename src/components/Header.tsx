@@ -1,41 +1,31 @@
 import { ShoppingCart } from "lucide-react";
 import { motion } from "framer-motion";
-import { useState, useEffect } from "react";
-import { LogoUploader } from "./LogoUploader";
 
 interface HeaderProps {
   cartCount: number;
   onCartClick: () => void;
 }
 
-const LOGO_STORAGE_KEY = "monj-logo-url";
+// Ganti URL ini dengan URL logo MON.J Anda
+const LOGO_URL = "https://via.placeholder.com/100x100?text=MON.J";
 
 export function Header({ cartCount, onCartClick }: HeaderProps) {
-  const [logoUrl, setLogoUrl] = useState<string | null>(null);
-
-  useEffect(() => {
-    const savedLogo = localStorage.getItem(LOGO_STORAGE_KEY);
-    if (savedLogo) {
-      setLogoUrl(savedLogo);
-    }
-  }, []);
-
-  const handleLogoChange = (url: string) => {
-    if (url) {
-      localStorage.setItem(LOGO_STORAGE_KEY, url);
-      setLogoUrl(url);
-    } else {
-      localStorage.removeItem(LOGO_STORAGE_KEY);
-      setLogoUrl(null);
-    }
-  };
-
   return (
     <header className="gradient-brand sticky top-0 z-50 shadow-lg">
       <div className="container py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <LogoUploader logoUrl={logoUrl} onLogoChange={handleLogoChange} />
+            <div className="w-12 h-12 bg-card rounded-2xl flex items-center justify-center shadow-md overflow-hidden">
+              <img
+                src={LOGO_URL}
+                alt="MON.J Logo"
+                className="w-full h-full object-cover"
+                onError={(e) => {
+                  (e.target as HTMLImageElement).style.display = "none";
+                  (e.target as HTMLImageElement).parentElement!.innerHTML = '<span class="text-2xl">🍜</span>';
+                }}
+              />
+            </div>
             <div>
               <h1 className="text-xl font-bold text-primary-foreground tracking-tight">
                 MON.J Petemon
