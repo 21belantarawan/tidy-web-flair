@@ -1,21 +1,27 @@
 import { UMKM } from "@/types/menu";
 
 // External image URLs - edit these with your own URLs
-const esTehNusantara = "";
+const esTehNusantara =
+  "https://res.cloudinary.com/dwssxrftk/image/upload/v1769956073/LOGO_ES_TEH_NUSANTARA.png_5cd2f673_meyjc0.webp";
 const originalTea =
   "https://res.cloudinary.com/dwssxrftk/image/upload/v1769956030/PHOTO-2026-02-01-21-24-41_dg0twx.jpg";
 const lemonTea = "https://res.cloudinary.com/dwssxrftk/image/upload/v1769956030/PHOTO-2026-02-01-21-24-46_brzp8b.jpg";
-const lycheeTea = "";
-const peachTea = "";
-const milkTea = "";
-const chocoMilkTea = "";
-const mangoMilkTea = "";
-const strawberryMilkTea = "";
-const redVelvetMilkTea = "";
-const taro = "";
-const greenTea = "";
-const esMelon = "";
-const coffeeLatte = "";
+const lycheeTea = "https://res.cloudinary.com/dwssxrftk/image/upload/v1769956030/PHOTO-2026-02-01-21-24-43_c0itmi.jpg";
+const peachTea = "https://res.cloudinary.com/dwssxrftk/image/upload/v1769956031/PHOTO-2026-02-01-21-24-40_fc4j70.jpg";
+const milkTea = "https://res.cloudinary.com/dwssxrftk/image/upload/v1769956029/PHOTO-2026-02-01-21-24-42_2_zwl7ux.jpg";
+const chocoMilkTea =
+  "https://res.cloudinary.com/dwssxrftk/image/upload/v1769956029/PHOTO-2026-02-01-21-24-54_2_x97jmq.jpg";
+const mangoMilkTea =
+  "https://res.cloudinary.com/dwssxrftk/image/upload/v1769956029/PHOTO-2026-02-01-21-24-42_awmoa1.jpg";
+const strawberryMilkTea =
+  "https://res.cloudinary.com/dwssxrftk/image/upload/v1769956030/PHOTO-2026-02-01-21-24-39_gfwkmm.jpg";
+const redVelvetMilkTea =
+  "https://res.cloudinary.com/dwssxrftk/image/upload/v1769956031/PHOTO-2026-02-01-21-24-40_2_mogloj.jpg";
+const taro = "https://res.cloudinary.com/dwssxrftk/image/upload/v1769956029/PHOTO-2026-02-01-21-24-55_ml3xaz.jpg";
+const greenTea = "https://res.cloudinary.com/dwssxrftk/image/upload/v1769956030/PHOTO-2026-02-01-21-24-51_kinfkn.jpg";
+const esMelon = "https://res.cloudinary.com/dwssxrftk/image/upload/v1769956029/PHOTO-2026-02-01-21-24-53_db9ybh.jpg";
+const coffeeLatte =
+  "https://res.cloudinary.com/dwssxrftk/image/upload/v1769956029/PHOTO-2026-02-01-21-24-54_nihjic.jpg";
 
 export const umkmData: UMKM[] = [
   {
