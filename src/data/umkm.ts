@@ -21,6 +21,10 @@ export const umkmData: UMKM[] = [
     emoji: "👨‍🍳",
     image: warungBuSri,
     isOpen: true,
+    operatingHours: {
+      open: "08:00",
+      close: "21:00",
+    },
     menu: [
       {
         id: "m1",
