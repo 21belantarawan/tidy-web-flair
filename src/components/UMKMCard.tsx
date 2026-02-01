@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { MapPin, Star } from "lucide-react";
+import { Clock, MapPin, Star } from "lucide-react";
 import { motion } from "framer-motion";
 import { UMKM } from "@/types/menu";
 
@@ -56,6 +56,10 @@ export function UMKMCard({ umkm, onClick }: UMKMCardProps) {
         <p className="text-muted-foreground text-sm flex items-center gap-1">
           <MapPin className="w-4 h-4" />
           {umkm.address}
+        </p>
+        <p className="text-muted-foreground text-sm flex items-center gap-1 mt-1">
+          <Clock className="w-4 h-4" />
+          {umkm.operatingHours.open} - {umkm.operatingHours.close}
         </p>
         <div className="mt-3 flex items-center gap-2">
           <span className="bg-primary/10 text-primary text-xs font-semibold px-3 py-1 rounded-full flex items-center gap-1">

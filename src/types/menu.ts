@@ -20,6 +20,10 @@ export interface UMKM {
   area: string;
   emoji: string;
   isOpen: boolean;
+  operatingHours: {
+    open: string;
+    close: string;
+  };
   menu: MenuItem[];
 }
 
