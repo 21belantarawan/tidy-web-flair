@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { Minus, Plus, Trash2 } from "lucide-react";
 import { motion } from "framer-motion";
 import { CartItem as CartItemType } from "@/types/menu";
@@ -10,6 +11,8 @@ interface CartItemProps {
 }
 
 export function CartItem({ item, onUpdateQuantity, onRemove }: CartItemProps) {
+  const [imageError, setImageError] = useState(false);
+
   return (
     <motion.div
       layout
@@ -19,8 +22,19 @@ export function CartItem({ item, onUpdateQuantity, onRemove }: CartItemProps) {
       className="bg-card rounded-2xl p-4 shadow-card"
     >
       <div className="flex gap-3">
-        <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-muted to-accent/30 flex items-center justify-center flex-shrink-0">
-          <span className="text-2xl">{item.emoji}</span>
+        <div className="w-16 h-16 rounded-xl overflow-hidden bg-gradient-to-br from-muted to-accent/30 flex-shrink-0">
+          {item.image && !imageError ? (
+            <img
+              src={item.image}
+              alt={item.name}
+              className="w-full h-full object-cover"
+              onError={() => setImageError(true)}
+            />
+          ) : (
+            <div className="w-full h-full flex items-center justify-center text-2xl">
+              {item.emoji}
+            </div>
+          )}
         </div>
 
         <div className="flex-1 min-w-0">
