@@ -1,20 +1,41 @@
 import { ShoppingCart } from "lucide-react";
 import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
+import { LogoUploader } from "./LogoUploader";
 
 interface HeaderProps {
   cartCount: number;
   onCartClick: () => void;
 }
 
+const LOGO_STORAGE_KEY = "monj-logo-url";
+
 export function Header({ cartCount, onCartClick }: HeaderProps) {
+  const [logoUrl, setLogoUrl] = useState<string | null>(null);
+
+  useEffect(() => {
+    const savedLogo = localStorage.getItem(LOGO_STORAGE_KEY);
+    if (savedLogo) {
+      setLogoUrl(savedLogo);
+    }
+  }, []);
+
+  const handleLogoChange = (url: string) => {
+    if (url) {
+      localStorage.setItem(LOGO_STORAGE_KEY, url);
+      setLogoUrl(url);
+    } else {
+      localStorage.removeItem(LOGO_STORAGE_KEY);
+      setLogoUrl(null);
+    }
+  };
+
   return (
     <header className="gradient-brand sticky top-0 z-50 shadow-lg">
       <div className="container py-4">
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <div className="w-12 h-12 bg-card rounded-2xl flex items-center justify-center shadow-md">
-              <span className="text-2xl">🍜</span>
-            </div>
+            <LogoUploader logoUrl={logoUrl} onLogoChange={handleLogoChange} />
             <div>
               <h1 className="text-xl font-bold text-primary-foreground tracking-tight">
                 MON.J Petemon
