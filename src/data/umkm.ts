@@ -2,7 +2,7 @@ import { UMKM } from "@/types/menu";
 
 // External image URLs - edit these with your own URLs
 const warungBuSri = "";
-const nasiGoreng = "";
+const Original tea = "";
 const mieGoreng = "";
 const ayamPenyet = "";
 const sotoAyam = "";
@@ -28,15 +28,15 @@ export const umkmData: UMKM[] = [
     menu: [
       {
         id: "m1",
-        name: "Nasi Goreng Spesial",
+        name: "Original Tea",
         price: 15000,
         emoji: "🍛",
-        image: nasiGoreng,
-        description: "Nasi goreng dengan telur, ayam, dan kerupuk",
+        image: Original Tea,
+        description: "Teh pilihan yang diseduh sempurna, Otentik, dan menyegarkan",
       },
       {
         id: "m2",
-        name: "Mie Goreng Jawa",
+        name: "Lemon Tea",
         price: 13000,
         emoji: "🍜",
         image: mieGoreng,
