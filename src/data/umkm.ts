@@ -1,7 +1,6 @@
 import { UMKM } from "@/types/menu";
 
 // Import images
-import warungBuSri from "@/assets/umkm/warung-bu-sri.jpg";
 import nasiGoreng from "@/assets/menu/nasi-goreng.jpg";
 import mieGoreng from "@/assets/menu/mie-goreng.jpg";
 import ayamPenyet from "@/assets/menu/ayam-penyet.jpg";
@@ -11,6 +10,9 @@ import esJeruk from "@/assets/menu/es-jeruk.jpg";
 import nasiPutih from "@/assets/menu/nasi-putih.jpg";
 import kerupuk from "@/assets/menu/kerupuk.jpg";
 
+// URL gambar UMKM - ganti URL di bawah ini untuk mengubah gambar
+const WARUNG_BU_SRI_IMAGE = "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800";
+
 export const umkmData: UMKM[] = [
   {
     id: "umkm1",
@@ -18,7 +20,7 @@ export const umkmData: UMKM[] = [
     address: "Jl. Petemon 4 No. 39, Surabaya",
     rating: 4.8,
     area: "Kecamatan Sawahan",
-    image: warungBuSri,
+    image: WARUNG_BU_SRI_IMAGE,
     isOpen: true,
     operatingHours: {
       open: "08:00",
