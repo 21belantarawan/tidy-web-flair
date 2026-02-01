@@ -40,4 +40,4 @@ export const DISTANCE_MAP: Record<string, number> = {
 
 export const ADMIN_FEE = 1000;
 export const COST_PER_KM = 1000;
-export const WHATSAPP_NUMBER = "6281234567890";
+export const WHATSAPP_NUMBER = "6281328746207";
