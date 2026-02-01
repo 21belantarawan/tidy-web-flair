@@ -2,8 +2,9 @@ import { UMKM } from "@/types/menu";
 
 // External image URLs - edit these with your own URLs
 const esTehNusantara = "";
-const originalTea = "";
-const lemonTea = "";
+const originalTea =
+  "https://res.cloudinary.com/dwssxrftk/image/upload/v1769956030/PHOTO-2026-02-01-21-24-41_dg0twx.jpg";
+const lemonTea = "https://res.cloudinary.com/dwssxrftk/image/upload/v1769956030/PHOTO-2026-02-01-21-24-46_brzp8b.jpg";
 const lycheeTea = "";
 const peachTea = "";
 const milkTea = "";
