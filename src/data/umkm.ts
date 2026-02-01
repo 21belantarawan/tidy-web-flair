@@ -1,21 +1,15 @@
 import { UMKM } from "@/types/menu";
 
-// ========================================
-// GANTI URL GAMBAR DI BAWAH INI
-// ========================================
-
-// Gambar UMKM
-const WARUNG_BU_SRI_IMAGE = "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?w=800";
-
-// Gambar Menu
-const NASI_GORENG_IMAGE = "https://images.unsplash.com/photo-1512058564366-18510be2db19?w=400";
-const MIE_GORENG_IMAGE = "https://images.unsplash.com/photo-1585032226651-759b368d7246?w=400";
-const AYAM_PENYET_IMAGE = "https://images.unsplash.com/photo-1632778149955-e80f8ceca2e8?w=400";
-const SOTO_AYAM_IMAGE = "https://images.unsplash.com/photo-1547928576-b822bc410b00?w=400";
-const ES_TEH_IMAGE = "https://images.unsplash.com/photo-1556679343-c7306c1976bc?w=400";
-const ES_JERUK_IMAGE = "https://images.unsplash.com/photo-1621263764928-df1444c5e859?w=400";
-const NASI_PUTIH_IMAGE = "https://images.unsplash.com/photo-1516684732162-798a0062be99?w=400";
-const KERUPUK_IMAGE = "https://images.unsplash.com/photo-1599490659213-e2b9527bd087?w=400";
+// Import images
+import warungBuSri from "@/assets/umkm/warung-bu-sri.jpg";
+import nasiGoreng from "@/assets/menu/nasi-goreng.jpg";
+import mieGoreng from "@/assets/menu/mie-goreng.jpg";
+import ayamPenyet from "@/assets/menu/ayam-penyet.jpg";
+import sotoAyam from "@/assets/menu/soto-ayam.jpg";
+import esTeh from "https://res.cloudinary.com/djtc6jsxw/image/upload/v1769941571/iced-tea-es-teh-with-mint-leaf-isolated-white-background-fresh-summer-drink_511235-12390_xxukk3.jpg";
+import esJeruk from "@/assets/menu/es-jeruk.jpg";
+import nasiPutih from "@/assets/menu/nasi-putih.jpg";
+import kerupuk from "@/assets/menu/kerupuk.jpg";
 
 export const umkmData: UMKM[] = [
   {
@@ -24,7 +18,7 @@ export const umkmData: UMKM[] = [
     address: "Jl. Petemon 4 No. 39, Surabaya",
     rating: 4.8,
     area: "Kecamatan Sawahan",
-    image: WARUNG_BU_SRI_IMAGE,
+    image: warungBuSri,
     isOpen: true,
     operatingHours: {
       open: "08:00",
@@ -36,7 +30,7 @@ export const umkmData: UMKM[] = [
         name: "Nasi Goreng Spesial",
         price: 15000,
         emoji: "🍛",
-        image: NASI_GORENG_IMAGE,
+        image: nasiGoreng,
         description: "Nasi goreng dengan telur, ayam, dan kerupuk",
       },
       {
@@ -44,7 +38,7 @@ export const umkmData: UMKM[] = [
         name: "Mie Goreng Jawa",
         price: 13000,
         emoji: "🍜",
-        image: MIE_GORENG_IMAGE,
+        image: mieGoreng,
         description: "Mie goreng bumbu Jawa dengan sayuran",
       },
       {
@@ -52,7 +46,7 @@ export const umkmData: UMKM[] = [
         name: "Ayam Penyet",
         price: 18000,
         emoji: "🍗",
-        image: AYAM_PENYET_IMAGE,
+        image: ayamPenyet,
         description: "Ayam goreng penyet dengan sambal pedas",
       },
       {
@@ -60,7 +54,7 @@ export const umkmData: UMKM[] = [
         name: "Soto Ayam",
         price: 14000,
         emoji: "🥣",
-        image: SOTO_AYAM_IMAGE,
+        image: sotoAyam,
         description: "Soto ayam kuah kuning dengan bihun",
       },
       {
@@ -68,7 +62,7 @@ export const umkmData: UMKM[] = [
         name: "Es Teh Manis",
         price: 5000,
         emoji: "🧊",
-        image: ES_TEH_IMAGE,
+        image: esTeh,
         description: "Es teh manis segar",
       },
       {
@@ -76,7 +70,7 @@ export const umkmData: UMKM[] = [
         name: "Es Jeruk",
         price: 6000,
         emoji: "🍊",
-        image: ES_JERUK_IMAGE,
+        image: esJeruk,
         description: "Es jeruk peras asli",
       },
       {
@@ -84,7 +78,7 @@ export const umkmData: UMKM[] = [
         name: "Nasi Putih",
         price: 5000,
         emoji: "🍚",
-        image: NASI_PUTIH_IMAGE,
+        image: nasiPutih,
         description: "Nasi putih hangat",
       },
       {
@@ -92,7 +86,7 @@ export const umkmData: UMKM[] = [
         name: "Kerupuk",
         price: 2000,
         emoji: "🥨",
-        image: KERUPUK_IMAGE,
+        image: kerupuk,
         description: "Kerupuk udang renyah",
       },
     ],
