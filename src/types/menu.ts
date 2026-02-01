@@ -31,11 +31,11 @@ export interface ShippingInfo {
 
 export const DISTANCE_MAP: Record<string, number> = {
   petemon: 0.5,
-  sawahan: 1.5,
-  kupang: 2,
-  bubutan: 2.5,
-  jepara: 3,
-  keputran: 3.5,
+  sawahan: 1.0,
+  kupang_krajan: 1.5,
+  banyu_urip: 2.0,
+  putat_jaya: 2.5,
+  pakis: 3.0,
 };
 
 export const ADMIN_FEE = 1000;

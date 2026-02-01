@@ -8,12 +8,12 @@ interface AddressFormProps {
 }
 
 const KELURAHAN_OPTIONS = [
-  { value: "petemon", label: "Petemon (0.5 km - Origin)" },
-  { value: "sawahan", label: "Sawahan (1.5 km)" },
-  { value: "kupang", label: "Kupang (2 km)" },
-  { value: "bubutan", label: "Bubutan (2.5 km)" },
-  { value: "jepara", label: "Jepara (3 km)" },
-  { value: "keputran", label: "Keputran (3.5 km)" },
+  { value: "petemon", label: "Petemon (0.5 km - Titik Asal)" },
+  { value: "sawahan", label: "Sawahan (1 km)" },
+  { value: "kupang_krajan", label: "Kupang Krajan (1.5 km)" },
+  { value: "banyu_urip", label: "Banyu Urip (2 km)" },
+  { value: "putat_jaya", label: "Putat Jaya (2.5 km)" },
+  { value: "pakis", label: "Pakis (3 km)" },
 ];
 
 export function AddressForm({ onCalculate }: AddressFormProps) {
