@@ -1,17 +1,15 @@
 import { UMKM } from "@/types/menu";
 
-// Import local images
-import warungBuSri from "@/assets/umkm/warung-bu-sri.jpg";
-import nasiGoreng from "@/assets/menu/nasi-goreng.jpg";
-import mieGoreng from "@/assets/menu/mie-goreng.jpg";
-import ayamPenyet from "@/assets/menu/ayam-penyet.jpg";
-import sotoAyam from "@/assets/menu/soto-ayam.jpg";
-import esJeruk from "@/assets/menu/es-jeruk.jpg";
-import nasiPutih from "@/assets/menu/nasi-putih.jpg";
-import kerupuk from "@/assets/menu/kerupuk.jpg";
-
-// URL for external images
-const esTeh = "https://res.cloudinary.com/djtc6jsxw/image/upload/v1769941571/iced-tea-es-teh-with-mint-leaf-isolated-white-background-fresh-summer-drink_511235-12390_xxukk3.jpg";
+// External image URLs - edit these with your own URLs
+const warungBuSri = "";
+const nasiGoreng = "";
+const mieGoreng = "";
+const ayamPenyet = "";
+const sotoAyam = "";
+const esTeh = "";
+const esJeruk = "";
+const nasiPutih = "";
+const kerupuk = "";
 
 export const umkmData: UMKM[] = [
   {
