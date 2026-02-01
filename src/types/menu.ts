@@ -4,6 +4,7 @@ export interface MenuItem {
   price: number;
   emoji: string;
   description: string;
+  image?: string;
 }
 
 export interface CartItem extends MenuItem {
@@ -15,6 +16,7 @@ export interface UMKM {
   name: string;
   address: string;
   rating: number;
+  image?: string;
   area: string;
   emoji: string;
   isOpen: boolean;

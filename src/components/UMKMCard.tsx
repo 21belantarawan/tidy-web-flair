@@ -1,3 +1,4 @@
+import { useState } from "react";
 import { MapPin, Star } from "lucide-react";
 import { motion } from "framer-motion";
 import { UMKM } from "@/types/menu";
@@ -8,6 +9,8 @@ interface UMKMCardProps {
 }
 
 export function UMKMCard({ umkm, onClick }: UMKMCardProps) {
+  const [imageError, setImageError] = useState(false);
+
   return (
     <motion.div
       initial={{ opacity: 0, y: 20 }}
@@ -19,10 +22,19 @@ export function UMKMCard({ umkm, onClick }: UMKMCardProps) {
     >
       {/* UMKM Header Image */}
       <div className="h-48 relative overflow-hidden bg-gradient-to-br from-muted to-accent/30">
-        <div className="absolute inset-0 flex items-center justify-center text-8xl">
-          {umkm.emoji}
-        </div>
-        <div className="absolute inset-0 bg-foreground/5" />
+        {umkm.image && !imageError ? (
+          <img
+            src={umkm.image}
+            alt={umkm.name}
+            className="w-full h-full object-cover"
+            onError={() => setImageError(true)}
+          />
+        ) : (
+          <div className="absolute inset-0 flex items-center justify-center text-8xl">
+            {umkm.emoji}
+          </div>
+        )}
+        <div className="absolute inset-0 bg-gradient-to-t from-foreground/40 to-transparent" />
         
         {umkm.isOpen && (
           <div className="absolute top-3 right-3 bg-brand-green px-3 py-1 rounded-full flex items-center gap-1.5 z-10">
@@ -30,13 +42,17 @@ export function UMKMCard({ umkm, onClick }: UMKMCardProps) {
             <span className="text-xs font-bold text-primary-foreground">Buka</span>
           </div>
         )}
+
+        {/* Name overlay on image */}
+        <div className="absolute bottom-0 left-0 right-0 p-4">
+          <h3 className="font-bold text-primary-foreground text-xl drop-shadow-lg">
+            {umkm.name}
+          </h3>
+        </div>
       </div>
 
       {/* UMKM Info */}
       <div className="p-5">
-        <h3 className="font-bold text-card-foreground text-lg mb-1">
-          {umkm.name}
-        </h3>
         <p className="text-muted-foreground text-sm flex items-center gap-1">
           <MapPin className="w-4 h-4" />
           {umkm.address}

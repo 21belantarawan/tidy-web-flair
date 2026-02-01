@@ -1,5 +1,16 @@
 import { UMKM } from "@/types/menu";
 
+// Import images
+import warungBuSri from "@/assets/umkm/warung-bu-sri.jpg";
+import nasiGoreng from "@/assets/menu/nasi-goreng.jpg";
+import mieGoreng from "@/assets/menu/mie-goreng.jpg";
+import ayamPenyet from "@/assets/menu/ayam-penyet.jpg";
+import sotoAyam from "@/assets/menu/soto-ayam.jpg";
+import esTeh from "@/assets/menu/es-teh.jpg";
+import esJeruk from "@/assets/menu/es-jeruk.jpg";
+import nasiPutih from "@/assets/menu/nasi-putih.jpg";
+import kerupuk from "@/assets/menu/kerupuk.jpg";
+
 export const umkmData: UMKM[] = [
   {
     id: "umkm1",
@@ -8,6 +19,7 @@ export const umkmData: UMKM[] = [
     rating: 4.8,
     area: "Kecamatan Sawahan",
     emoji: "👨‍🍳",
+    image: warungBuSri,
     isOpen: true,
     menu: [
       {
@@ -15,6 +27,7 @@ export const umkmData: UMKM[] = [
         name: "Nasi Goreng Spesial",
         price: 15000,
         emoji: "🍛",
+        image: nasiGoreng,
         description: "Nasi goreng dengan telur, ayam, dan kerupuk",
       },
       {
@@ -22,6 +35,7 @@ export const umkmData: UMKM[] = [
         name: "Mie Goreng Jawa",
         price: 13000,
         emoji: "🍜",
+        image: mieGoreng,
         description: "Mie goreng bumbu Jawa dengan sayuran",
       },
       {
@@ -29,6 +43,7 @@ export const umkmData: UMKM[] = [
         name: "Ayam Penyet",
         price: 18000,
         emoji: "🍗",
+        image: ayamPenyet,
         description: "Ayam goreng penyet dengan sambal pedas",
       },
       {
@@ -36,6 +51,7 @@ export const umkmData: UMKM[] = [
         name: "Soto Ayam",
         price: 14000,
         emoji: "🥣",
+        image: sotoAyam,
         description: "Soto ayam kuah kuning dengan bihun",
       },
       {
@@ -43,6 +59,7 @@ export const umkmData: UMKM[] = [
         name: "Es Teh Manis",
         price: 5000,
         emoji: "🧊",
+        image: esTeh,
         description: "Es teh manis segar",
       },
       {
@@ -50,6 +67,7 @@ export const umkmData: UMKM[] = [
         name: "Es Jeruk",
         price: 6000,
         emoji: "🍊",
+        image: esJeruk,
         description: "Es jeruk peras asli",
       },
       {
@@ -57,6 +75,7 @@ export const umkmData: UMKM[] = [
         name: "Nasi Putih",
         price: 5000,
         emoji: "🍚",
+        image: nasiPutih,
         description: "Nasi putih hangat",
       },
       {
@@ -64,6 +83,7 @@ export const umkmData: UMKM[] = [
         name: "Kerupuk",
         price: 2000,
         emoji: "🥨",
+        image: kerupuk,
         description: "Kerupuk udang renyah",
       },
     ],
