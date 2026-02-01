@@ -23,9 +23,6 @@ export function WhatsAppButton({
   const total = subtotal + shipping.cost + ADMIN_FEE;
 
   const getPaymentMethodText = () => {
-    if (payment.method === "cod") {
-      return "💵 Bayar di Tempat (COD)";
-    }
     return `📱 QRIS${payment.proofFileName ? ` (Bukti: ${payment.proofFileName})` : ""}`;
   };
 

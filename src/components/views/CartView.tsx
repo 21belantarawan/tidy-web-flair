@@ -25,7 +25,7 @@ export function CartView({
 }: CartViewProps) {
   const [shipping, setShipping] = useState<ShippingInfo | null>(null);
   const [address, setAddress] = useState("");
-  const [payment, setPayment] = useState<PaymentInfo>({ method: "cod" });
+  const [payment, setPayment] = useState<PaymentInfo>({ method: "qris" });
 
   const handleCalculateShipping = (shippingInfo: ShippingInfo, addr: string) => {
     setShipping(shippingInfo);
@@ -35,7 +35,7 @@ export function CartView({
   const isEmpty = items.length === 0;
 
   // Check if order can be placed
-  const canOrder = payment.method === "cod" || (payment.method === "qris" && payment.proofImage);
+  const canOrder = payment.method === "qris" && !!payment.proofImage;
 
   return (
     <motion.section
