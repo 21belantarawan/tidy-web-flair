@@ -18,7 +18,7 @@ export interface UMKM {
   rating: number;
   image?: string;
   area: string;
-  emoji: string;
+  emoji?: string;
   isOpen: boolean;
   operatingHours: {
     open: string;

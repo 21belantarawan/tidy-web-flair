@@ -18,7 +18,6 @@ export const umkmData: UMKM[] = [
     address: "Jl. Petemon 4 No. 39, Surabaya",
     rating: 4.8,
     area: "Kecamatan Sawahan",
-    emoji: "👨‍🍳",
     image: warungBuSri,
     isOpen: true,
     operatingHours: {
