@@ -5,6 +5,7 @@ import { CartItem } from "@/components/CartItem";
 import { AddressForm } from "@/components/AddressForm";
 import { CostSummary } from "@/components/CostSummary";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
+import { PaymentMethod, PaymentInfo } from "@/components/PaymentMethod";
 import { CartItem as CartItemType, ShippingInfo } from "@/types/menu";
 
 interface CartViewProps {
@@ -24,6 +25,7 @@ export function CartView({
 }: CartViewProps) {
   const [shipping, setShipping] = useState<ShippingInfo | null>(null);
   const [address, setAddress] = useState("");
+  const [payment, setPayment] = useState<PaymentInfo>({ method: "cod" });
 
   const handleCalculateShipping = (shippingInfo: ShippingInfo, addr: string) => {
     setShipping(shippingInfo);
@@ -31,6 +33,9 @@ export function CartView({
   };
 
   const isEmpty = items.length === 0;
+
+  // Check if order can be placed
+  const canOrder = payment.method === "cod" || (payment.method === "qris" && payment.proofImage);
 
   return (
     <motion.section
@@ -85,6 +90,11 @@ export function CartView({
           {/* Address Form */}
           <AddressForm onCalculate={handleCalculateShipping} />
 
+          {/* Payment Method */}
+          {shipping && (
+            <PaymentMethod onPaymentChange={setPayment} />
+          )}
+
           {/* Cost Summary */}
           {shipping && (
             <>
@@ -94,6 +104,8 @@ export function CartView({
                 subtotal={subtotal}
                 shipping={shipping}
                 address={address}
+                payment={payment}
+                disabled={!canOrder}
               />
             </>
           )}
