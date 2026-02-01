@@ -6,7 +6,8 @@ const nasiGoreng = "";
 const mieGoreng = "";
 const ayamPenyet = "";
 const sotoAyam = "";
-const esTeh = "";
+const esTeh =
+  "https://res.cloudinary.com/djtc6jsxw/image/upload/v1769941571/iced-tea-es-teh-with-mint-leaf-isolated-white-background-fresh-summer-drink_511235-12390_xxukk3.jpg";
 const esJeruk = "";
 const nasiPutih = "";
 const kerupuk = "";
