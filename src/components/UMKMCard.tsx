@@ -34,7 +34,7 @@ export function UMKMCard({ umkm, onClick }: UMKMCardProps) {
       whileHover={{ y: -4 }}
       whileTap={{ scale: 0.98 }}
       onClick={onClick}
-      className="bg-card rounded-3xl shadow-card overflow-hidden cursor-pointer border-2 border-primary/20 transition-shadow hover:shadow-card-hover"
+      className="bg-card rounded-3xl shadow-card overflow-hidden cursor-pointer transition-shadow hover:shadow-card-hover"
     >
       {/* UMKM Header Image */}
       <div className="h-48 relative overflow-hidden bg-gradient-to-br from-muted to-accent/30">
