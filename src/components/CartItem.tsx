@@ -62,9 +62,9 @@ export function CartItem({ item, onUpdateQuantity, onRemove }: CartItemProps) {
           <motion.button
             whileTap={{ scale: 0.9 }}
             onClick={() => onUpdateQuantity(item.quantity + 1)}
-            className="w-8 h-8 gradient-brand rounded-full flex items-center justify-center"
+            className="w-8 h-8 bg-blue-500 hover:bg-blue-600 rounded-full flex items-center justify-center"
           >
-            <Plus className="w-4 h-4 text-primary-foreground" />
+            <Plus className="w-4 h-4 text-white" />
           </motion.button>
           
           <motion.button
