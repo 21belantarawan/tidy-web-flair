@@ -33,8 +33,8 @@ export const umkmData: UMKM[] = [
     image: esTehNusantara,
     isOpen: true,
     operatingHours: {
-      open: "08:00",
-      close: "21:00",
+      open: "11:00",
+      close: "19:00",
     },
     menu: [
       // Tea Series
