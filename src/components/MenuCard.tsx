@@ -52,9 +52,12 @@ export function MenuCard({ item, onAdd }: MenuCardProps) {
             <motion.button
               whileTap={{ scale: 0.9 }}
               onClick={onAdd}
-              className="w-9 h-9 gradient-brand rounded-full flex items-center justify-center shadow-brand"
+              className="w-9 h-9 rounded-full flex items-center justify-center shadow-lg"
+              style={{
+                background: "linear-gradient(135deg, hsl(220 90% 50%) 0%, hsl(180 70% 50%) 50%, hsl(60 90% 60%) 100%)"
+              }}
             >
-              <Plus className="w-5 h-5 text-primary-foreground" />
+              <Plus className="w-5 h-5 text-white" />
             </motion.button>
           </div>
         </div>
