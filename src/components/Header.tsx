@@ -2,7 +2,8 @@ import { useState } from "react";
 import { ShoppingCart } from "lucide-react";
 import { motion } from "framer-motion";
 
-const LOGO_URL = "https://res.cloudinary.com/djtc6jsxw/image/upload/v1769946520/WhatsApp_Image_2026-01-27_at_23.18.22-removebg-preview_x5am71.png";
+const LOGO_URL =
+  "https://res.cloudinary.com/djtc6jsxw/image/upload/v1769946520/WhatsApp_Image_2026-01-27_at_23.18.22-removebg-preview_x5am71.png";
 
 interface HeaderProps {
   cartCount: number;
@@ -21,7 +22,7 @@ export function Header({ cartCount, onCartClick }: HeaderProps) {
               {logoError ? (
                 <span className="text-2xl">🍜</span>
               ) : (
-                <img 
+                <img
                   src={LOGO_URL}
                   alt="MON.J Logo"
                   className="w-full h-full object-contain"
@@ -31,7 +32,9 @@ export function Header({ cartCount, onCartClick }: HeaderProps) {
             </div>
             <div>
               <h1 className="text-xl font-bold text-primary-foreground tracking-tight">MON.J Petemon</h1>
-              <p className="text-xs text-primary-foreground/80 font-medium">Kuliner Petemon, Antar Cepat!</p>
+              <p className="text-xs text-primary-foreground/80 font-medium">
+                Kuliner Petemon, Cepat, Praktis,& Terpercaya
+              </p>
             </div>
           </div>
 
