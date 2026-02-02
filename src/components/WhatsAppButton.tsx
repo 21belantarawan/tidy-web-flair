@@ -67,10 +67,10 @@ Terima kasih! 🙏`;
       whileTap={{ scale: disabled ? 1 : 0.98 }}
       onClick={handleOrder}
       disabled={disabled}
-      className={`w-full font-bold py-4 rounded-2xl shadow-brand flex items-center justify-center gap-3 text-lg transition-all ${
+      className={`w-full font-bold py-4 rounded-2xl shadow-lg flex items-center justify-center gap-3 text-lg transition-all ${
         disabled
           ? "bg-muted text-muted-foreground cursor-not-allowed"
-          : "gradient-brand text-primary-foreground"
+          : "bg-green-500 hover:bg-green-600 text-white"
       }`}
     >
       <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
