@@ -1,3 +1,5 @@
+export type PaymentType = "qris" | "cod";
+
 export interface MenuItem {
   id: string;
   name: string;

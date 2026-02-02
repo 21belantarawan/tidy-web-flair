@@ -35,7 +35,8 @@ export function CartView({
   const isEmpty = items.length === 0;
 
   // Check if order can be placed
-  const canOrder = payment.method === "qris" && !!payment.proofImage;
+  // QRIS requires proof upload, COD can order directly
+  const canOrder = payment.method === "cod" || (payment.method === "qris" && !!payment.proofImage);
 
   return (
     <motion.section
